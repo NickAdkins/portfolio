@@ -3,5 +3,8 @@ from django.contrib import admin
 # Register your models here.
 from .models import CaseStudy, Item
 
-admin.site.register(CaseStudy)
+class CaseStudyAdmin(admin.ModelAdmin):
+	pass
+
+admin.site.register(CaseStudy, CaseStudyAdmin)
 admin.site.register(Item)
